@@ -1,5 +1,6 @@
 body
 {
+    color: #ffffff;
     margin: 0%;
     background-color: #334433;
 }
@@ -9,35 +10,48 @@ body
     text-align: center;
     width: 600px;
     height: 300px;
-    background-color: #05aa05;
+    background-color: #797979;
     border-radius: 10px;
     padding: 30px;
-    text-align;
+    animation-name: animacja;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    text-shadow: 0px 0px 10px black;
 }
 .reg
 {
-    color: #fab0b0;
     padding: 5px;
     width: 200px;
     height: 100px;
     margin: auto;
-    background-color: #006300;
+    background-color: #73a500;
     border-radius: 10px;
     line-height:100px;
 }
 .log
 {
-    color: #fab0b0;
     padding: 5px;
     width: 50%;
     width: 200px;
     height: 100px;
     margin: auto;
-    background-color: #006300;
+    background-color: #001f63;
     border-radius: 10px;
     line-height:100px;
 }
 a
 {
     text-decoration: none;
+    color: #ffffff;
 }
+@keyframes animacja
+{
+    0% {box-shadow: 0px 0px 30px 3px violet}
+    15% {box-shadow: 0px 0px 30px 3px indigo}
+    30% {box-shadow: 0px 0px 30px 3px blue}
+    45% {box-shadow: 0px 0px 30px 3px green}
+    60% {box-shadow: 0px 0px 30px 3px yellow}
+    75% {box-shadow: 0px 0px 30px 3px orange}
+    100% {box-shadow: 0px 0px 30px 3px red}
+}
+

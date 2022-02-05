@@ -38,6 +38,8 @@
                         <option>Mężczyzna</option>
                         <option>Inna</option>
                 </select>
+                <div style="height:60px"></div>
+                <button type="submit">Zarejestruj się!</button>
             </form>
         </div> 
     </body>

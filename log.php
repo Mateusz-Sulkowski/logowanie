@@ -22,6 +22,8 @@
                 <label for="pass">Hasło</label><br>
                 <div style="height:10px"></div>
                 <input type="password" name="pass"><br>
+                <div style="height:60px"></div>
+                <button type="submit">Zaloguj się!</button>
             </form>   
         </div>
     </body>

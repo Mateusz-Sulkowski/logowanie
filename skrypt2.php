@@ -1,4 +1,3 @@
-
 <?php
     $_POST;
     $login = $_POST['login'];
@@ -17,7 +16,6 @@
     }
     else
     {
-        echo "<h1>Udało połączyć się z bazą!</h>";
         if(strcmp($pass1, $pass2) !== 0)
             {
                 echo '<h1>Hasła różnią się!<h2><br><button><a href="reg.php" style="text-decoration:none;color:black;">Powrót do strony rejestracji</a></button>';
@@ -32,6 +30,9 @@
                 {   
                     echo '<h1>Rejestracja przebiegła pomyślnie!</h>';
 
+                    $sql = "INSERT INTO `uzytkownicy` (`id`, `login`, `pass`, `data urodzenia`, `plec`) VALUES (NULL, '$login', '$pass1', '$data', '$plec');";
+                    mysqli_query($conn, $sql);
+                    echo '<br><br><button><a href="log.php" style="text-decoration:none;color:black;>Zaloguj się</a></button>';
                 }
             }
     }

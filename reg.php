@@ -14,18 +14,18 @@
             Rejestracja
         </div>  
         <div id="formularz">
-            <form action="skryp2.php" method="POST">
+            <form action="skrypt2.php" method="POST">
                 <label for="login">Podaj swój login</label><br>
                 <div style="height:10px"></div>
                 <input type="text" name="login"><br>
                 <div style="height:10px"></div>
                 <label for="pass1">Podaj swoje hasło</label><br>
                 <div style="height:10px"></div>
-                <input type="password" name="pass"><br>
+                <input type="password" name="pass1"><br>
                 <div style="height:10px"></div>
                 <label for="pass2">Powtórz swoje hasło</label><br>
                 <div style="height:10px"></div>
-                <input type="password" name="pass"><br>
+                <input type="password" name="pass2"><br>
                 <div style="height:10px"></div>
                 <label for="data">Podaj datę swojego urodzenia</label>
                 <div style="height:10px"></div>

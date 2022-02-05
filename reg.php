@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>Page Title</title>
+        <title>Rejestracja</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="nav">
             Rejestracja
-        </div>   
+        </div>  
+        <div id="formularz">
+            <form action="skryp2.php" method="POST">
+                <label for="login">Podaj swój login</label><br>
+                <div style="height:10px"></div>
+                <input type="text" name="login"><br>
+                <div style="height:10px"></div>
+                <label for="pass1">Podaj swoje hasło</label><br>
+                <div style="height:10px"></div>
+                <input type="password" name="pass"><br>
+                <div style="height:10px"></div>
+                <label for="pass2">Powtórz swoje hasło</label><br>
+                <div style="height:10px"></div>
+                <input type="password" name="pass"><br>
+                <div style="height:10px"></div>
+                <label for="data">Podaj datę swojego urodzenia</label>
+                <div style="height:10px"></div>
+                <input type="date" name="data">
+                <div style="height:10px"></div>
+                <label for="plec">Podaj swoją płeć</label>
+                <div style="height:10px"></div>
+                <select name="plec">
+                        <option>Kobieta</option>
+                        <option>Mężczyzna</option>
+                        <option>Inna</option>
+                </select>
+            </form>
+        </div> 
     </body>
 </html> 

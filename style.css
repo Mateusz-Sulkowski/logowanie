@@ -3,6 +3,7 @@ body
     color: #ffffff;
     margin: 0%;
     background-color: #334433;
+    font-family: 'Fira Sans', sans-serif;
 }
 .wybor
 {
@@ -54,4 +55,56 @@ a
     75% {box-shadow: 0px 0px 30px 3px orange}
     100% {box-shadow: 0px 0px 30px 3px red}
 }
-
+#nav
+{
+    background-color: #ff1144;
+    font-size: 30px;
+    letter-spacing: 10px;
+    height:100px;
+    position: static;
+    line-height: 100px;
+    text-align: center;
+}
+#formularz
+{   
+    text-align: center;
+    margin-left: auto;
+    padding-top: 200px;
+    letter-spacing: 3px;
+}
+form > input
+{
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+    line-height: 150%;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    transition: 1s;
+}
+form > input:focus
+{
+    background-color: #ff1144;
+    color: #eeeeee
+}
+form > label
+{
+    font-size: 20px;
+}
+form > select
+{
+    border-radius: 10px;
+    height: 35px;
+    width: 205px;
+    line-height: 150%;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    transition: 1s;
+}
+form > select:focus
+{
+    background-color: #ff1144;
+    color: #eeeeee;
+}

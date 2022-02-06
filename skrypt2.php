@@ -16,11 +16,19 @@
     }
     else
     {
-        if(strcmp($pass1, $pass2) !== 0)
-            {
-                echo '<h1>Hasła różnią się!<h2><br><button><a href="reg.php" style="text-decoration:none;color:black;">Powrót do strony rejestracji</a></button>';
-            }
+        $spr = "SELECT * FROM uzytkownicy WHERE login='$login'";
+        $wynik = mysqli_query($conn, $spr);
+        if(mysqli_num_rows($wynik)>0)
+        {
+            echo '<h1>Nieprawidłowy login!</h><br><br><button><a href="reg.php" style="text-decoration:none;color:black;">Powrót do strony rejestracji</a></button>';
+        }
         else
+        {
+            if(strcmp($pass1, $pass2) !== 0)
+            {
+                echo '<h1>Hasła różnią się!</h><br><button><a href="reg.php" style="text-decoration:none;color:black;">Powrót do strony rejestracji</a></button>';
+            }
+            else
             {
                 if(empty($data))
                 {
@@ -28,12 +36,13 @@
                 }
                 else
                 {   
-                    echo '<h1>Rejestracja przebiegła pomyślnie!</h>';
-
+                    echo '<h1>Rejestracja przebiegła pomyślnie!</h><br><br><br><a href="log.php" style="text-decoration:none;color:black;><button>Zaloguj się</button></a>';
+                   
                     $sql = "INSERT INTO `uzytkownicy` (`id`, `login`, `pass`, `data urodzenia`, `plec`) VALUES (NULL, '$login', '$pass1', '$data', '$plec');";
                     mysqli_query($conn, $sql);
-                    echo '<br><br><button><a href="log.php" style="text-decoration:none;color:black;>Zaloguj się</a></button>';
+                    mysqli_close($conn);
                 }
             }
+        }
     }
 ?>

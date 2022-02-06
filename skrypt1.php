@@ -2,8 +2,6 @@
     $_POST;
     $login = $_POST['login'];
     $pass = $_POST['pass'];
-    echo $login;
-    echo $pass;
     $server = "localhost";
     $user = "root";
     $pass = "";
@@ -15,6 +13,11 @@
     }
     else
     {
-        
+        $spr = "SELECT * FROM uzytkownicy WHERE login='$login' AND pass='$pass'";
+        $wynik = mysqli_query($conn, $spr);
+        while($row = mysqli_fetch_array($wynik))
+        {
+            echo $row["0"];
+        }
     }
 ?>

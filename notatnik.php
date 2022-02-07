@@ -25,9 +25,10 @@
                 {
                     $notatka = $row['0'];
                 }
+                $_SESSION['imie'];
         ?> 
-        <div id="formularz" action="notuj.php" method="POST">
-            <form>
+        <div id="formularz" >
+            <form action="notuj.php" method="POST">
                 <label for="notatnik">Oto twój notatnik</label><br><br>
                 <textarea name="notatka" type="text" id="notatnik"><?php echo $notatka; ?></textarea><br><br>
                 <Button type="submit">

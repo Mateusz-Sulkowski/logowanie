@@ -13,7 +13,7 @@
     {
         $imie = $_SESSION['imie'];
         $sql = "UPDATE uzytkownicy SET notatki='$notatnik' WHERE login='$imie'";
-        $res = mysqli_query($conn, $sql);
-        echo $res;
+        mysqli_query($conn, $sql);
+        header('Location: notatnik.php');
     } 
 ?>

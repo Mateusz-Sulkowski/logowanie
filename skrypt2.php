@@ -7,7 +7,7 @@
     $data = $_POST['data'];
     $plec = $_POST['plec'];
     $db = "logowanie";
-    $conn = mysqli_connect($host, $db_user, $pass, $db);
+    $conn = mysqli_connect($host, $db_user, $db_pass, $db);
     if (mysqli_connect_errno()) 
     {
         die("<h1>Nie udało poączyć się z bazą</h>");
@@ -18,7 +18,7 @@
         $wynik = mysqli_query($conn, $spr);
         if(mysqli_num_rows($wynik)>0)
         {
-            echo '<h1>Nieprawidłowy login!</h><br><br><button><a href="reg.php" style="text-decoration:none;color:black;">Powrót do strony rejestracji</a></button>';
+            echo '<h1>Nieprawidłowy login!</h><br><br><button><a href="reg.html" style="text-decoration:none;color:black;">Powrót do strony rejestracji</a></button>';
         }
         else
         {

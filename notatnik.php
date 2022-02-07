@@ -14,17 +14,27 @@
     <body>
         <div id="nav">Notatnik</div>
         <?php
+                require_once "connect.php";
+                $db = "logowanie";
+                $conn = mysqli_connect($host, $db_user, $db_pass, $db);
                 echo "<h1 style='text-align:center;'>Witaj ".$_SESSION["imie"]."!</h>";
-            ?> 
+                $imie = $_SESSION["imie"];
+                $sql = "SELECT notatki FROM uzytkownicy WHERE login='$imie';";
+                $res = mysqli_query($conn, $sql);
+                while($row = mysqli_fetch_row($res))
+                {
+                    $notatka = $row['0'];
+                }
+        ?> 
         <div id="formularz" action="notuj.php" method="POST">
             <form>
                 <label for="notatnik">Oto twój notatnik</label><br><br>
-                <textarea name="notatka" type="text" id="notatnik"></textarea><br><br>
+                <textarea name="notatka" type="text" id="notatnik"><?php echo $notatka; ?></textarea><br><br>
                 <Button type="submit">
                     Zapisz!
                 </button>
                 <button type="reset">
-                    Wyczyść!
+                    Cofnij ostatni zapis!
                 </button>
             </form>
         </div>

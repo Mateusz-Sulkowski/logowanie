@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once "connect.php";
     $_POST;
     $login = $_POST['login'];
@@ -15,8 +16,9 @@
         $res = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_row($res))
         {
-            echo "Twoje id to: ".$row["0"]."<br>";
-            echo "Twoja płeć to: ".$row["4"]."<br>";
+            print_r($row);
+            $_SESSION["imie"]=$row['1']; 
+            header('Location: notatnik.php');
         }
 
     }

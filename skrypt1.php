@@ -1,12 +1,9 @@
 <?php
+    require_once "connect.php";
     $_POST;
     $login = $_POST['login'];
     $pass = $_POST['pass'];
-    $server = "localhost";
-    $user = "root";
-    $db_pass = "";
-    $db = "logowanie";
-    $conn = mysqli_connect($server, $user, $db_pass, $db);
+    $conn = mysqli_connect($host, $db_user, $db_pass, $db);
     if ($conn->connect_error) 
     {
         die("<h1>Nie udało poączyć się z bazą</h>");

@@ -5,11 +5,7 @@
     $pass2 = $_POST['pass2'];
     $data = $_POST['data'];
     $plec = $_POST['plec'];
-    $server = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "logowanie";
-    $conn = mysqli_connect($server, $user, $pass, $db);
+    $conn = mysqli_connect($host, $db_user, $pass, $db);
     if (mysqli_connect_errno()) 
     {
         die("<h1>Nie udało poączyć się z bazą</h>");

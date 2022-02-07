@@ -36,9 +36,10 @@
                 {   
                     echo '<h1>Rejestracja przebiegła pomyślnie!</h><br><br><br><a href="log.php" style="text-decoration:none;color:black;><button>Zaloguj się</button></a>';
                    
-                    $sql = "INSERT INTO `uzytkownicy` (`id`, `login`, `pass`, `data urodzenia`, `plec`) VALUES (NULL, '$login', '$pass1', '$data', '$plec');";
+                    $sql = "INSERT INTO `uzytkownicy` (`id`, `login`, `pass`, `data urodzenia`, `plec`, `notatki`) VALUES (NULL, '$login', '$pass1', '$data', '$plec', '');";
                     mysqli_query($conn, $sql);
                     mysqli_close($conn);
+                    header('Location: index.html');
                 }
             }
         }

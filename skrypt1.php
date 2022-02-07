@@ -4,20 +4,22 @@
     $pass = $_POST['pass'];
     $server = "localhost";
     $user = "root";
-    $pass = "";
+    $db_pass = "";
     $db = "logowanie";
-    $conn = mysqli_connect($server, $user, $pass, $db);
-    if (mysqli_connect_errno()) 
+    $conn = mysqli_connect($server, $user, $db_pass, $db);
+    if ($conn->connect_error) 
     {
         die("<h1>Nie udało poączyć się z bazą</h>");
     }
     else
     {
-        $spr = "SELECT * FROM uzytkownicy WHERE login='$login' AND pass='$pass'";
-        $wynik = mysqli_query($conn, $spr);
-        while($row = mysqli_fetch_array($wynik))
+        $sql = "SELECT * FROM uzytkownicy WHERE login='$login' AND pass='$pass'"; 
+        $res = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_row($res))
         {
-            echo $row["0"];
+            echo "Twoje id to: ".$row["0"]."<br>";
+            echo "Twoja płeć to: ".$row["4"]."<br>";
         }
+
     }
 ?>

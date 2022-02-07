@@ -3,8 +3,9 @@
     $_POST;
     $login = $_POST['login'];
     $pass = $_POST['pass'];
+    $db = "logowanie";
     $conn = mysqli_connect($host, $db_user, $db_pass, $db);
-    if ($conn->connect_error) 
+    if (!$conn) 
     {
         die("<h1>Nie udało poączyć się z bazą</h>");
     }

@@ -1,10 +1,12 @@
 <?php
+    require_once "connect.php";
     $_POST;
     $login = $_POST['login'];
     $pass1 = $_POST['pass1'];
     $pass2 = $_POST['pass2'];
     $data = $_POST['data'];
     $plec = $_POST['plec'];
+    $db = "logowanie";
     $conn = mysqli_connect($host, $db_user, $pass, $db);
     if (mysqli_connect_errno()) 
     {
